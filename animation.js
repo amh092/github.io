@@ -11,7 +11,7 @@ for (let index = 0; index < works.length; index++) {
     works[index].classList.remove(`rotate-45`)
     setTimeout(() => {
         works[index].classList.remove(`relative`)
-    }, 900);
+    }, 1000);
 
     
     
