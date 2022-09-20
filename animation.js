@@ -20,7 +20,7 @@ for (let index = 0; index < works.length; index++) {
 else if(gallery.getBoundingClientRect().top > 900 )
 for (let index = 0; index < works.length; index++) {
     works[index].classList.remove(`left-0` )
-    works[index].classList.add(`left-80`)
+    works[index].classList.add(`left-40`)
     works[index].classList.add(`rotate-45`)
     works[index].classList.add(`relative`)
 
