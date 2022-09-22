@@ -1,11 +1,9 @@
 //when page load do
 
-const body = document.getElementById('body')
-const wait = document.getElementById('wait')
-const gallery = document.getElementById("works");
+const gallery1 = document.getElementById("works");
 const works = document.querySelector(".works");
 
-const contact = document.getElementById("social");
+const contactMe = document.getElementById("social");
 const social = document.querySelector(".contacts")
 
 function animationStart(index) {
@@ -31,12 +29,12 @@ function animationStartForContacts(index) {
 
 // scroll on gallery section
 window.onscroll = function () {
-    if (gallery.getBoundingClientRect().top < 800) {
+    if (gallery1.getBoundingClientRect().top < 800) {
         for (let index = 0; index < works.children.length; index++) {
           animationStart(index);
         }
       }
-        if (contact.getBoundingClientRect().top  < 750 || window.innerWidth > 500){
+        if (contactMe.getBoundingClientRect().top  < 750 || window.innerWidth > 500){
         for (let index = 0; index < social.children.length; index++) {
           animationStartForContacts(index)}
          
