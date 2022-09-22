@@ -2,6 +2,7 @@
 
 var htmlTag = document.getElementsByTagName('html')[0];
 var languageSwitchBtn = document.getElementById('language')
+
 //navbar 
 var whoAmILi = document.getElementById('who-am-i')
 var galleryLi = document.getElementById('gallery-li')
@@ -50,6 +51,7 @@ languageSwitchBtn.addEventListener('click',function(){
 
     if(htmlTag.lang === 'en') {
         htmlTag.lang = 'ar'
+        htmlTag.dir = 'rtl'
         languageSwitchBtn.innerText = 'En'
         nameField.innerText = arabicName
         workDesc.innerText = arabicDesc
@@ -63,7 +65,7 @@ languageSwitchBtn.addEventListener('click',function(){
 
         }
         else {
-         
+            htmlTag.dir = 'ltr'
             htmlTag.lang = 'en'
             gallery.innerText = englishGallery
             languageSwitchBtn.innerText = 'عربي'
