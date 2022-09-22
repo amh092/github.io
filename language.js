@@ -35,7 +35,7 @@ const englishContactMe = 'Contact Me '
 //navbar 
 const arabicWhoAmILi = 'انا'
 const arabicGalleryLi = 'معرض الاعمال'
-const arabicContactMeLi = 'نواصل معي'
+const arabicContactMeLi = 'تواصل معي'
 //content 
 const arabicName = 'مرحبا اسمي أحمد محمد'
 const arabicDesc = '   اعمل مستقل كمتخصص في عمل واجهات مواقع الكترونية'
