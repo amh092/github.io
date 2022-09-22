@@ -26,6 +26,7 @@ const englishName = 'Hello my name is Ahmed Mohammad'
 const englishDesc = 'I work as  freelancer  frontend web developer'
 const englishSkills = 'My Skills'
 const englishFrameworks = 'Frameworks'
+const englishGallery = "Work gallery"
 const englishContactMe = 'Contact Me '
 
 
@@ -40,8 +41,7 @@ const arabicDesc = '   اعمل مستقل كمتخصص في عمل واجهات
 const arabicSkills = 'التقنيات التي اجيدها'
 const arabicFrameworks = 'اطر الاعمال التي اجيدها'
 const arabicContactMe = 'تواصل معي'
-
-
+const arabicGallery = "معرض الاعمال" 
 
 
 
@@ -59,11 +59,13 @@ languageSwitchBtn.addEventListener('click',function(){
         whoAmILi.innerText = arabicWhoAmILi;
         galleryLi.innerText = arabicGalleryLi
         contactMeLi.innerText = arabicContactMeLi
+        gallery.innerText = arabicGallery;
 
         }
         else {
          
             htmlTag.lang = 'en'
+            gallery.innerText = englishGallery
             languageSwitchBtn.innerText = 'عربي'
             nameField.innerText = englishName
             workDesc.innerText = englishDesc
