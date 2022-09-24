@@ -1,6 +1,3 @@
-//when page load do
-
-
 const gallery1 = document.getElementById("works");
 const works = document.querySelector(".works");
 const header = document.getElementById('header');
@@ -28,13 +25,13 @@ function animationStartForContacts(index) {
   }
   function headerBlack(){
     header.classList.remove('bg-transparent')
-    header.classList.add('bg-black')
+    header.classList.add('bg-[rgba(0,0,0,.7)]')
     header.classList.add('fixed')
 
   
   }
   function headerTransparent(){
-    header.classList.remove('bg-black');
+    header.classList.remove('bg-[rgba(0,0,0,.7)]');
     header.classList.remove('fixed')
     header.classList.add('bg-transparent')
   }
@@ -49,14 +46,14 @@ window.onscroll = function () {
         if (contactMe.getBoundingClientRect().top  < 750 || window.innerWidth > 500){
 
         for (let index = 0; index < social.children.length; index++) {
-        
+        animationStartForContacts(index)
         }
          
         }
 
         if(me.getBoundingClientRect().top <0){
          headerBlack()
-         console.log(me.getBoundingClientRect().top)
+      
         }
         else{
           headerTransparent()
