@@ -1,5 +1,6 @@
 'use-strict'
 
+
 var htmlTag = document.getElementsByTagName('html')[0];
 var languageSwitchBtn = document.getElementById('language')
 
@@ -44,13 +45,10 @@ const arabicFrameworks = 'اطر الاعمال التي اجيدها'
 const arabicContactMe = 'تواصل معي'
 const arabicGallery = "معرض الاعمال" 
 
+const language = () => {
+    if (localStorage.getItem('lang') === 'en') {
 
-
-languageSwitchBtn.addEventListener('click',function(){
-     
-
-    if(htmlTag.lang === 'en') {
-        htmlTag.lang = 'ar'
+        htmlTag.lang = localStorage.getItem('lang')
         htmlTag.dir = 'rtl'
         languageSwitchBtn.innerText = 'En'
         nameField.innerText = arabicName
@@ -65,8 +63,9 @@ languageSwitchBtn.addEventListener('click',function(){
 
         }
         else {
+
             htmlTag.dir = 'ltr'
-            htmlTag.lang = 'en'
+            htmlTag.lang = localStorage.getItem('lang')
             gallery.innerText = englishGallery
             languageSwitchBtn.innerText = 'عربي'
             nameField.innerText = englishName
@@ -77,6 +76,23 @@ languageSwitchBtn.addEventListener('click',function(){
             whoAmILi.innerText = englishWhoAmILi;
             galleryLi.innerText = englishGalleryLi
             contactMeLi.innerText = englishContactMeLi
-        }
-        
+        }    
+}
+
+window.onload = function(){
+
+   language()
+}
+
+languageSwitchBtn.addEventListener('click',function(){
+    if(localStorage.getItem('lang') === 'ar'){
+        localStorage.setItem('lang','en')
+    }
+    else {
+        localStorage.setItem('lang','ar')
+    }
+    language()
 })
+     
+
+  
