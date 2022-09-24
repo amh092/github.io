@@ -1,5 +1,5 @@
 //when page load do
-window.location.href = 'https://amh092.github.io/portofolio/'
+
 
 const gallery1 = document.getElementById("works");
 const works = document.querySelector(".works");
