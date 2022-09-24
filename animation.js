@@ -45,9 +45,12 @@ window.onscroll = function () {
       }
         if (contactMe.getBoundingClientRect().top  < 750 || window.innerWidth > 500){
 
-        for (let index = 0; index < social.children.length; index++) {
-        animationStartForContacts(index)
-        }
+          setTimeout(()=>{
+            for (let index = 0; index < social.children.length; index++) {
+            animationStartForContacts(index)
+            }
+
+          },800)
          
         }
 
