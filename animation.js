@@ -50,7 +50,7 @@ window.onscroll = function () {
             animationStartForContacts(index)
             }
 
-          },800)
+          },600)
          
         }
 
