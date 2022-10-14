@@ -6,16 +6,6 @@ const me = document.getElementById('me');
 const contactMe = document.getElementById("social");
 const social = document.querySelector(".contacts")
 
-function animationStart(index) {
-   
-  setTimeout(() => {
-    works.children[index].classList.add(`left-0`);
-    works.children[index].classList.remove(`rotate-45`);
-    setTimeout(() => {
-      works.children[index].classList.remove(`relative`);
-    }, 200);
-  }, 300 * index);
-}
 function animationStartForContacts(index) {
   setTimeout(() => {
      
