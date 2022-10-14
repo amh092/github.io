@@ -20,6 +20,18 @@ function animationStartForContacts(index) {
 
   
   }
+
+function animationStart(index) {
+
+   setTimeout(() => {
+     works.children[index].classList.add(`left-0`);
+     works.children[index].classList.remove(`rotate-45`);
+     setTimeout(() => {
+       works.children[index].classList.remove(`relative`);
+     }, 200);
+   }, 300 * index);
+ }
+
   function headerTransparent(){
     header.classList.remove('bg-[rgba(0,0,0,.7)]');
     header.classList.remove('fixed')
