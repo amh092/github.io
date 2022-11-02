@@ -563,10 +563,6 @@ video {
   left: 0px;
 }
 
-.left-\[90px\] {
-  left: 90px;
-}
-
 .m-1 {
   margin: 0.25rem;
 }
@@ -602,6 +598,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-full {
