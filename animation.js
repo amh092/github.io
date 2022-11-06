@@ -11,18 +11,15 @@ function animationStartForContacts(index) {
      
                social.children[index].classList.add(`opacity-100`)
                   social.children[index].classList.remove(`opacity-0`)
-    }, 100*index);
+    }, 603*index);
   }
   function headerBlack(){
     header.classList.remove('bg-transparent')
     header.classList.add('bg-[rgba(0,0,0,.7)]')
     header.classList.add('fixed')
-
-  
   }
 
 function animationStart(index) {
-
    setTimeout(() => {
      works.children[index].classList.add(`left-0`);
      works.children[index].classList.remove(`rotate-45`);
@@ -39,32 +36,24 @@ function animationStart(index) {
   }
 // scroll on gallery section
 window.onscroll = function () {
-    if (gallery1.getBoundingClientRect().top < 800) {
+  
+    if (gallery1.getBoundingClientRect().top < 750) {
         for (let index = 0; index < works.children.length; index++) {
           animationStart(index);
         }
-       
       }
-        if (contactMe.getBoundingClientRect().top  < 750 || window.innerWidth > 500){
-
+        if (contactMe.getBoundingClientRect().top  < 880){
           setTimeout(()=>{
             for (let index = 0; index < social.children.length; index++) {
             animationStartForContacts(index)
             }
-
-          },600)
-         
+          },10) 
         }
 
-        if(me.getBoundingClientRect().top <0){
+        if(me.getBoundingClientRect().top < 0){
          headerBlack()
-      
         }
         else{
           headerTransparent()
-        }
-       
-     
-       
-        
+        }        
 }
