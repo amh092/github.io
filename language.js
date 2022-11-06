@@ -38,14 +38,16 @@ var contact = document.getElementById('contact-me')
         const arabicGallery = "معرض الاعمال" 
 //--end of navbar--//
 
+var EnglishIsRunning = false;
+var ArabicIsRunning = false;
+
 const language = () => {
-    if (localStorage.getItem('lang') === 'en') {
+    if (localStorage.getItem('lang') === 'en' && EnglishIsRunning === false) {
 
         htmlTag.lang = localStorage.getItem('lang')
         htmlTag.dir = 'rtl'
         languageSwitchBtn.innerText = 'En'
         nameField.innerText = arabicName
-        
         mySkills.innerText = arabicSkills
         frameworks.innerText = arabicFrameworks
         contact.innerText = arabicContactMe;
@@ -53,13 +55,15 @@ const language = () => {
         galleryLi.innerText = arabicGalleryLi
         contactMeLi.innerText = arabicContactMeLi
         gallery.innerText = arabicGallery;
-
-        workDesc.innerHTML = ''
+        workDesc.innerHTML = ' '
+       
+           
         for (let index = 0; index < arabicDesc.length; index++) {
+          
             setTimeout(() => {
                 workDesc.innerHTML +=  arabicDesc.charAt(index)
-            }, 100*index);
-            
+                
+            }, 25*index);
         }
         }
         else {
@@ -68,15 +72,18 @@ const language = () => {
             gallery.innerText = englishGallery
             languageSwitchBtn.innerText = 'عربي'
             nameField.innerText = englishName
-            workDesc.innerText = ''
+            workDesc.innerText = ' '     
+            
             for (let index = 0; index < englishDesc.length; index++) {
+              
                 setTimeout(() => {
+                 
                     workDesc.innerHTML +=  englishDesc.charAt(index)
-                }, 60*index);
-                
+                    
+                }, 25*index);  
+              
             }
-    
-               
+            }
             mySkills.innerText = englishSkills
             frameworks.innerText = englishFrameworks
             contact.innerText = englishContactMe;
@@ -84,7 +91,7 @@ const language = () => {
             galleryLi.innerText = englishGalleryLi
             contactMeLi.innerText = englishContactMeLi
         }    
-}
+
 
 window.onload = function(){
 
@@ -92,11 +99,14 @@ window.onload = function(){
 }
 
 languageSwitchBtn.addEventListener('click',function(){
+    
     if(localStorage.getItem('lang') === 'ar'){
         localStorage.setItem('lang','en')
+       
     }
     else {
         localStorage.setItem('lang','ar')
+     
     }
     language()
 })
